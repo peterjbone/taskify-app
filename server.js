@@ -18,6 +18,8 @@ mongoose
 		console.log(error);
 	});
 
+async function connectToDb() {}
+
 app.listen(PORT, () => {
 	console.log(`server started at port ${PORT}`);
 });
