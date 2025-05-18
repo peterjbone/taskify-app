@@ -14,6 +14,8 @@ userSchema.pre("save", async function (next) {
 	if (!user.isModified) return next();
 	let salt = await bcrypt.genSalt(10);
 	let hash = await bcrypt.hash(use.password, salt);
+	user.password = hash;
+	next();
 });
 
 const User = models.User || mongoose.model("User", userSchema);
