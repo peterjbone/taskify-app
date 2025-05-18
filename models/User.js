@@ -13,6 +13,7 @@ userSchema.pre("save", async function (next) {
 	const user = this;
 	if (!user.isModified) return next();
 	let salt = await bcrypt.genSalt(10);
+	let hash = await bcrypt.hash();
 });
 
 const User = models.User || mongoose.model("User", userSchema);
