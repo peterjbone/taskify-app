@@ -12,6 +12,7 @@ const userSchema = new Schema({
 userSchema.pre("save", async function (next) {
 	const user = this;
 	if (!user.isModified) return next();
+	let salt = await bcrypt.genSalt();
 });
 
 const User = models.User || mongoose.model("User", userSchema);
