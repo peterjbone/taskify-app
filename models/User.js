@@ -9,6 +9,8 @@ const userSchema = new Schema({
 	password: { type: String, required: true }
 });
 
-userSchema.pre("save", async function (next) {});
+userSchema.pre("save", async function (next) {
+	const user = this;
+});
 
 const User = models.User || mongoose.model("User", userSchema);
