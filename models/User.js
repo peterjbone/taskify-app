@@ -18,4 +18,6 @@ userSchema.pre("save", async function (next) {
 	next();
 });
 
+userSchema.methods.comparePassword = async function () {};
+
 const User = models.User || mongoose.model("User", userSchema);
