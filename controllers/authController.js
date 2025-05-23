@@ -1,1 +1,1 @@
-async function name(params) {}
+async function registerUser(req, res) {}
