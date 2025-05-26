@@ -3,3 +3,5 @@ async function registerUser(req, res) {
 	//console.log(data);
 	res.send("success");
 }
+
+const AuthController = {};
