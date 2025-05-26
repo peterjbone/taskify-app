@@ -4,4 +4,8 @@ async function registerUser(req, res) {
 	res.send("success");
 }
 
-const AuthController = {};
+const AuthController = {
+	registerUser
+};
+
+module.exports = AuthController;
